@@ -16,5 +16,17 @@ use App\Http\Controllers\TransactionController;
 |
 */
 
+Route::get('transactions', [TransactionController::class, 'index']); // Listar transacciones
+Route::post('transactions', [TransactionController::class, 'store']); // Crear transacción
+Route::get('transactions/{id}', [TransactionController::class, 'show']); // Ver transacción
+Route::put('transactions/{id}', [TransactionController::class, 'update']); // Actualizar transacción
+Route::delete('transactions/{id}', [TransactionController::class, 'destroy']); // Eliminar transacción
+
+
+
 Route::apiResource('categories', CategoryController::class);
-Route::apiResource('transactions', TransactionController::class);
+
+
+
+
+
